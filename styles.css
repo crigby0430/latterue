@@ -278,7 +278,6 @@ main li + li
 }
 
 #currently > div > div {
-    border: 1px dashed var(--text);
     text-align: center;
     flex: 1;
 }
