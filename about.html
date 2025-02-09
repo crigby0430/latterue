@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>latterue</title>
+</head>
+<body>
+
+    <div id="skip"><a href="#maincontent">Skip to Main Content</a></div>
+    <div class="container">
+
+        <header>
+            <h1 class="header">latterue</h1>
+        </header>
+
+        <div class="pagecontent">
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="fun.html">Fun Stuff</a></li>
+                    <li><a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-36918-17">Guestbook</a></li>
+                </ul>
+            </nav>
+
+            <main id="maincontent">
+                <h2>About Me</h2>
+                <table>
+                    <tr>
+                        <th scope="row">Name</th>
+                        <td>Chase</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Pronouns</th>
+                        <td>He/him</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Age</th>
+                        <td>31</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Location</th>
+                        <td>USA</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Interests</th>
+                        <td>Writing, music, fiber arts (knitting and hand spinning), indie games, web accessibility</th>
+                    </tr>
+                </table>
+
+                <h2>About this site</h2>
+                <p>I'd been wanting to make a personal site for a few years, but I never got around to it until I graduated from my master's program and suddenly found myself with a boatload of free time.</p>
+                    
+                <p>The social landscape of the internet—and the world in general—has been difficult for me, especially lately. Over the past few years, I feel like I've lost touch with my sense of self and my interests by holding everything potentially weird or off-putting about me so close to my chest. Connecting with other people beyond the surface level has gotten harder—what have I given them to connect with? This site is intended to help on both fronts, by giving me a dedicated, shame-free space to talk about my projects and to practice opening up a little more.</p>
+
+                <p>Lately I've been practicing the editing process (and battling perfectionism) by lowering my standards for what is "publishable" and letting people see my work in a less-than-polished state. Things will likely be changed, added, or removed as I experiment with different layouts. Enjoy!</p>
+
+            </main>
+
+        </div>
+
+        <footer>
+            <span>You are visitor #<span id="hitcount"></span></span>
+            <span>Last updated: <span id="lastupdate"></span></span>
+        </footer>
+
+    </div>
+
+<!-- Scripts -->
+
+    <!-- Hit counter + last updated date -->
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var site_data = JSON.parse(this.responseText);
+                var num_arr = site_data.info.views.toString().split("");
+                var num_str = "";
+                for (i = 0; i < num_arr.length; i++) {
+                    num_str += num_arr[i];
+                    if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
+                    var date_str = site_data.info.last_updated;
+                    var date_obj = new Date(site_data.info.last_updated);
+                    document.getElementById("lastupdate").innerHTML = (date_obj.getMonth()+1) + "-" + date_obj.getDate() + "-" + date_obj.getFullYear();
+                }
+                document.getElementById("hitcount").innerHTML = num_str;
+            }
+        };
+        xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=latterue", true);
+        xhttp.send();
+    </script>
+
+</body>
+</html>
