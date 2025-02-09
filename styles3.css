@@ -1,12 +1,12 @@
 /* Variables */
 
 :root {
-    --bgdark: #006E85;
-    --bgmed: #3BAB8B;
-    --bglight: #FFF7AD;
-    --primary: #006E85;
+    --bgdark: #0057ba;
+    --bgmed: #65a98f;
+    --bglight: #f5f5b8;
+    --primary: #a93400;
     --secondary: #a93400;
-    --text: #1B1A1C;
+    --text: #141716;
     --shadow: rgba(0, 0, 0, 0.4);
 
     --header: 'Federo';
