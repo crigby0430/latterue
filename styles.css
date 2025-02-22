@@ -1,10 +1,10 @@
 /* Variables */
 
 :root {
-    --bgdark: #006E85;
-    --bgmed: #3BAB8B;
-    --bglight: #FFF7AD;
-    --primary: #006E85;
+    --bgdark: #204D5F;
+    --bgmed: #3bab8b;
+    --bglight: #CFB27B;
+    --primary: #204D5F;
     --secondary: #a93400;
     --text: #1B1A1C;
     --shadow: rgba(0, 0, 0, 0.4);
@@ -47,7 +47,9 @@ html, body {
 }
 
 body {
-    background: var(--bgdark);
+    background-image: url(images/bg/train1920x1280_d.png);
+    background-position: center;
+    background-size: cover;
     color: var(--text);
     scrollbar-color: var(--bgdark) var(--bglight);
 
@@ -74,8 +76,8 @@ hr {
 }
 
 .container {
-    border: 2px solid var(--text);
-    background-color: var(--bgmed);
+    border: 2px double var(--text);
+    background-color: rgba(40, 39, 23, 0.746);
     box-shadow: 4px 4px 4px var(--shadow);
 
     padding: 1rem;
@@ -179,7 +181,7 @@ nav ul {
 
 nav ul li {
     width: auto;
-    border: 2px solid var(--bglight);
+    border: 2px double var(--bglight);
     background-color: var(--primary);
     padding: .25rem 1rem;
     box-shadow: 4px 4px 4px var(--shadow);
@@ -274,12 +276,14 @@ main li + li
 #currently > div {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 4px;
 }
 
 #currently > div > div {
     text-align: center;
     flex: 1;
+    border: 2px double var(--text);
 }
 
 /* Footer */
