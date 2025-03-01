@@ -43,13 +43,12 @@
 
 html, body {
     width: 100%;
-    height: 100%;
 }
 
 body {
     background-image: url(images/bg/train1920x1280_d.png);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     color: var(--text);
     scrollbar-color: var(--bgdark) var(--bglight);
 
@@ -80,8 +79,10 @@ hr {
     background-color: rgba(40, 39, 23, 0.746);
     box-shadow: 4px 4px 4px var(--shadow);
 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding: 1rem;
-    width: 70%;
+    width: 90%;
     max-width: 1024px;
     height: 90%;
 
@@ -129,6 +130,10 @@ h1, h2 {
 
 h1 {
     letter-spacing: .8rem;
+}
+
+h2 {
+    border-bottom: 2px double var(--secondary);
 }
 
 h2, h3 {
@@ -343,11 +348,6 @@ th {
     height: 50px;
 }
 
-.border {
-    border: 10px solid transparent;
-    border-image: url(images/blacklace.png) 17 round;
-}
-
 /* Mobile Layouts */
 
 @media screen and (max-width: 850px) {
@@ -356,10 +356,6 @@ th {
         width: 100%;
         height: 100%;
         border: 0;
-    }
-
-    .header {
-        text-align: center;
     }
     
 }
@@ -376,6 +372,7 @@ th {
         font-size: 2.25rem;
         letter-spacing: normal;
         padding: 0 1rem;
+
     }
 
     .pagecontent {
@@ -388,5 +385,14 @@ th {
         max-width: none;
         width: 100%;
     }
+
+    nav ul {
+        gap: 0.3rem;
+    }
     
+    nav ul li {
+        height: 2rem;
+        text-align: center;
+    }
+
 }
