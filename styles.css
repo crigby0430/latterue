@@ -47,8 +47,9 @@ html, body {
 
 body {
     background-image: url(images/bg/train1920x1280_d.png);
-    background-position: center;
-    background-size: contain;
+    background-size: 100%;
+    background-attachment: fixed;
+    image-rendering: pixelated;
     color: var(--text);
     scrollbar-color: var(--bgdark) var(--bglight);
 
@@ -58,6 +59,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 img {
@@ -204,7 +206,6 @@ nav ul li a {
 
 main {
     background-color: var(--bglight);
-    height: 100%;
     width: 100%;
     overflow-y: scroll;
 
