@@ -50,6 +50,7 @@ html, body {
 body {
     background-image: url(images/bg/train_1280_b8x8_apricot.png);
     image-rendering: pixelated;
+    background-attachment: fixed;
 
     color: var(--text);
 
