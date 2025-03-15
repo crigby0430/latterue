@@ -49,7 +49,6 @@ body {
     background-image: url(images/bg/train1920x1280_d.png);
     background-size: 100%;
     background-attachment: fixed;
-    image-rendering: pixelated;
     color: var(--text);
     scrollbar-color: var(--bgdark) var(--bglight);
 
