@@ -1,13 +1,14 @@
 /* Variables */
 
 :root {
-    --bgdark: #204D5F;
+    --bgdark: #204d5f;
     --bgmed: #3bab8b;
     --bglight: #CFB27B;
     --primary: #204D5F;
     --secondary: #a93400;
     --text: #1B1A1C;
     --shadow: rgba(0, 0, 0, 0.4);
+    --containerbg: rgba(40, 39, 23, 0.746);
 
     --header: 'Federo';
     --subheader: 'Spectral';
@@ -39,6 +40,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-color: var(--bglight) var(--primary);
 }
 
 html, body {
@@ -46,11 +48,10 @@ html, body {
 }
 
 body {
-    background-image: url(images/bg/train1920x1280_d.png);
-    background-size: 100%;
-    background-attachment: fixed;
+    background-image: url(images/bg/train_1280_b8x8_apricot.png);
+    image-rendering: pixelated;
+
     color: var(--text);
-    scrollbar-color: var(--bgdark) var(--bglight);
 
     font-family: sans-serif; /* fallback for older browsers */
     font-family: var(--body);
@@ -76,7 +77,7 @@ hr {
 
 .container {
     border: 2px double var(--text);
-    background-color: rgba(40, 39, 23, 0.746);
+    background-color: var(--containerbg);
     box-shadow: 4px 4px 4px var(--shadow);
 
     margin-top: 2rem;
@@ -205,8 +206,6 @@ nav ul li a {
 main {
     background-color: var(--bglight);
     width: 100%;
-    overflow-y: scroll;
-
     padding: 1rem 2rem;
     line-height: 1.5;
 }
