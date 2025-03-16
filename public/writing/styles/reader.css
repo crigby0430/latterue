@@ -1,0 +1,106 @@
+/* Variables */
+
+:root {
+    --primary: #204D5F;
+    --secondary: #a93400;
+    --shadow: rgba(0, 0, 0, 0.4);
+
+    --header: 'Federo';
+    --subheader: 'Spectral';
+    --nav: 'Federo';
+    --body: 'Spectral';
+}
+
+/* Fonts */
+
+@font-face {
+	font-family: 'Federo';
+	src: url('../../fonts/Federo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Spectral';
+    src: url('../../fonts/Spectral-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Spectral';
+    src: url('../../fonts/Spectral-Bold.ttf');
+    font-weight: bold;
+}
+
+/* General Layout */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    font-family: var(--body);
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+body {
+    margin: 0 auto;
+    padding: 3rem;
+    max-width: 700px;
+}
+
+header {
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    color: var(--text);
+}
+
+button {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--body);
+    border: 1px solid var(--text);
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
+}
+
+h1 {
+    font-family: var(--header);
+    letter-spacing: .8rem;
+    font-size: 3rem;
+}
+
+p {
+    line-height: 1.4rem;
+    margin-top: 1rem;
+}
+
+aside {
+    margin: 0.5rem 0;
+    border-left: 2px double var(--secondary);
+    padding: 1rem;
+}
+
+dt {
+    font-weight: bold;
+    float: left;
+    margin-right: 0.25rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 2px double var(--secondary);
+    margin-top: 2rem;
+    padding: 1rem;
+}
