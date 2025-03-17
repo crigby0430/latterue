@@ -3,6 +3,8 @@
 :root {
     --primary: #204D5F;
     --secondary: #a93400;
+    --light: #CFB27B;
+    --dark: #1B1A1C;
     --shadow: rgba(0, 0, 0, 0.4);
 
     --header: 'Federo';
@@ -70,6 +72,11 @@ button {
     border: 1px solid var(--text);
     border-radius: 8px;
     padding: 0.25rem 0.5rem;
+}
+
+button:hover {
+    background-color: var(--secondary);
+    color: var(--light);
 }
 
 h1 {
