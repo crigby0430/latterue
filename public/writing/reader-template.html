@@ -10,9 +10,12 @@
 </head>
 <header>
     <a href="../writing.html">back</a>
-    <div class="themes">
-        <button onclick="darkmode()">dark mode</button>
-        <button onclick="lightmode()">light mode</button>
+    <div class="theme-selector">
+        <input type="radio" id="lightmode" value="light" name="themes" onclick=lightmode() checked />
+        <label for="lightmode">light</label>
+
+        <input type="radio" id="darkmode" value="dark" name="themes" onclick=darkmode() />
+        <label for="darkmode">dark</label>
     </div>
 </header>
 <body>
